@@ -1,0 +1,15 @@
+/* Copyright 2026 上海如静知华信息科技有限公司 · https://www.zhuatech.cn/ */
+package cn.zhuatech.digitalhuman.controller;
+
+import cn.zhuatech.digitalhuman.service.DigitalHumanService;
+import jakarta.validation.Valid;
+import org.springframework.web.bind.annotation.*;
+
+@RestController
+@RequestMapping("/api/digitalhuman")
+@CrossOrigin(originPatterns = {"http://localhost:*", "http://127.0.0.1:*"})
+public class DigitalHumanController {
+    private final DigitalHumanService service;
+    public DigitalHumanController(DigitalHumanService service) { this.service = service; }
+    @PostMapping("/plan") public DigitalHumanService.Result plan(@Valid @RequestBody DigitalHumanService.Request request) { return service.plan(request); }
+}

@@ -1,0 +1,7 @@
+# Copyright 2026 上海如静知华信息科技有限公司 · https://www.zhuatech.cn/
+spring.application.name: zhuatech-digitalhuman
+server.port: ${SERVER_PORT:8080}
+zhuatech.digital-human.provider: ${ZHUATECH_DIGITAL_HUMAN_PROVIDER:local}
+zhuatech.digital-human.base-url: ${ZHUATECH_DIGITAL_HUMAN_BASE_URL:}
+zhuatech.digital-human.model: ${ZHUATECH_DIGITAL_HUMAN_MODEL:digital-human-provider-model}
+zhuatech.digital-human.api-key: ${ZHUATECH_DIGITAL_HUMAN_API_KEY:}

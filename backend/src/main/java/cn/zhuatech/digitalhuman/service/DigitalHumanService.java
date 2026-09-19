@@ -8,8 +8,14 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+ */
 @Service
 public class DigitalHumanService {
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public Result plan(Request request) {
         String normalized = request.script().trim().replaceAll("\\s+", " ");
         String[] sentences = normalized.split("(?<=[。！？!?；;])");
@@ -43,10 +49,16 @@ public class DigitalHumanService {
             "LOCAL_PRESENTATION_PLANNER");
     }
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     private double estimateSeconds(String text) {
         return Math.max(2.0, Math.round(text.length() / 3.8 * 10.0) / 10.0);
     }
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record Request(@NotBlank @Size(max = 5000) String script,
                           @NotBlank String avatarId,
                           @NotBlank String voiceId,
@@ -54,7 +66,13 @@ public class DigitalHumanService {
                           boolean avatarAuthorized,
                           boolean voiceAuthorized,
                           boolean disclosureEnabled) {}
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record Segment(int sequence, String text, double seconds, String visual) {}
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record Result(String status, int segmentCount, double estimatedSeconds,
                          List<Segment> segments, List<String> checks,
                          Map<String, Object> providerPayload, String executionMode) {}

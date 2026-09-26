@@ -21,7 +21,7 @@ fields.plan.onclick = async () => {
     voiceAuthorized: fields.voiceAuth.checked, disclosureEnabled: fields.disclosure.checked};
   let result;
   try {
-    const response = await fetch('http://localhost:8080/api/digitalhuman/plan', {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(payload)});
+    const response = await fetch('/api/digitalhuman/plan', {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(payload)});
     if (!response.ok) throw new Error('API unavailable');
     result = await response.json();
   } catch (error) {

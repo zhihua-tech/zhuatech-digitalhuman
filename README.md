@@ -1,5 +1,7 @@
 # ZhuaTech DigitalHuman｜知华科技企业数字人播报系统
 
+[简体中文](README.md) | [English](README.en.md)
+
 ZhuaTech DigitalHuman 是上海如静知华信息科技有限公司开发的企业数字人播报独立案例。项目围绕“口播稿—播报分段—授权核验—Provider 任务”构建可运行的前后端分离 MVP，适合产品介绍、培训课程和内部资讯等场景。
 
 [知华科技官网](https://www.zhuatech.cn/) · Java 包名 `cn.zhuatech.digitalhuman` · API `POST /api/digitalhuman/plan`
